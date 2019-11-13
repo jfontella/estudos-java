@@ -7,12 +7,15 @@ public class Room {
 	private boolean avaible;
 	private Tenant tenant = new Tenant("Reservado", "mail@mail.com");
 	
+	
 	public Room(int number, double price, boolean avaible) {
 		this.number = number;
 		this.price = price;
 		this.avaible = avaible;
 	}
 	
+
+
 	public int getNumber() {
 		return number;
 	}
@@ -40,7 +43,8 @@ public class Room {
 		this.tenant = tenant;
 	}
 	public String getRoomInfo() {
-		return "Cliente: " + tenant.getName() + "\n"
+		return  "Numero: " + this.getNumber() + "\n"
+				+ "Cliente: " + tenant.getName() + "\n"
 				+ "Email: " + tenant.getMail() + "\n"
 				+ "Pago :" + tenant.isPaid();
 	}

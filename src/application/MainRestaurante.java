@@ -8,20 +8,16 @@ import java.util.Locale;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-import entities.Conta;
 import entities.CurrencyConverter;
-import entities.Employee;
 import entities.Pedido;
-import entities.Product;
 import entities.Produto;
-import entities.Room;
-import entities.Tenant;
 import entities.Cardapio;
 // List <String> lista = fila.stream().filter(x -> x.charAt(0) == letra).collect(Collectors.toList());
 
 
 
-public class Main {
+public class MainRestaurante {
+	
     public static void main(String[] args) {
     	
         Scanner scn = new Scanner(System.in);  
@@ -75,9 +71,9 @@ public class Main {
         	if(operador == 3) {
         		pedido.encerrarPedido();
         		System.out.println(pedido.exibirPedido());
-        		System.out.println("Total: " + pedido.getTotal());
+        		System.out.println("Total: " + (pedido.getTotal() - pedido.getTaxas()));
         		System.out.println("Serviços: " + pedido.getTaxas());
-        		System.out.println("Total + serviços: " + (pedido.getTotal() - pedido.getTaxas()));
+        		System.out.println("Total + serviços: " + pedido.getTotal());
         		System.out.println("-------------");
         		System.out.println("Obrigado por usar o restaurante");
         		operador = 0;
