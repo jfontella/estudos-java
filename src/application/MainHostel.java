@@ -52,9 +52,6 @@ public class MainHostel {
 			System.out.println(room.getRoomInfo());
 		}
 		
-		
-		
-		
 	}
 
 }
