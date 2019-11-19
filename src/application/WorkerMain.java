@@ -45,7 +45,6 @@ public class WorkerMain  {
 		System.out.println("Mes: " + mes + " ano: " + ano);
 		System.out.println("Saldo: " + worker.incomePayment(ano, mes));
 			
-		
 	}
 
 }
